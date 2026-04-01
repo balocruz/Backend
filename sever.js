@@ -7,12 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB Atlas
-const MONGO_URI = "mongodb+srv://officialcruz001_db_user:e2CYgve1wXThwkMO@cluster0.xeauene.mongodb.net/videmate?retryWrites=true&w=majority";
+// Connect to MongoDB Atlas securely
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
-    .then(() => console.log("Connected to MongoDB!"))
-    .catch(err => console.error("MongoDB connection error:", err));
 
 // Database Schema for Downloads
 const DownloadSchema = new mongoose.Schema({
