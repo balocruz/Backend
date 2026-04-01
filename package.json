@@ -2,9 +2,9 @@
   "name": "videmate-backend",
   "version": "1.0.0",
   "description": "Video download API",
-  "main": "sever.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node sever.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
